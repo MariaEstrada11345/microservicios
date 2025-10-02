@@ -1,0 +1,19 @@
+version: '3'
+services:
+  usuarios:
+    build: ./usuarios
+    ports:
+      - "5000:5000"
+
+  pedidos:
+    build: ./pedidos
+    ports:
+      - "5001:5001"
+    depends_on:
+      - usuarios
+      - inventario
+
+  inventario:
+    build: ./inventario
+    ports:
+      - "5002:5002"
