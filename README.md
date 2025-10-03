@@ -72,26 +72,6 @@ Monitorización:
 curl http://localhost:3004/status  
 curl http://localhost:3004/test-connection/usuarios  
 
-## Estructura del Proyecto
-microservicios-lab/  
-├── docker-compose.yml  
-├── usuarios/  
-│   ├── Dockerfile  
-│   ├── package.json  
-│   └── index.js  
-├── pedidos/  
-│   ├── Dockerfile  
-│   ├── requirements.txt  
-│   └── app.py  
-├── inventario/  
-│   ├── Dockerfile  
-│   ├── go.mod  
-│   └── main.go  
-└── monitor/  
-    ├── Dockerfile  
-    ├── requirements.txt  
-    └── monitor.py  
-
 ## Características Implementadas
 Servicio de Inventario en Go:  
 - Implementado en lenguaje diferente (Go)  
@@ -127,14 +107,6 @@ Error de puertos:
 Logs de diagnóstico:  
 docker-compose logs  
 docker-compose logs --tail=50 usuarios  
-
-## Próximos Pasos
-- Base de datos para cada servicio  
-- Autenticación y autorización  
-- Circuit breaker para llamadas entre servicios  
-- Logging centralizado  
-- Métricas y alertas  
-- API Gateway  
 
 ## Desarrollo
 Agregar un nuevo servicio:  
